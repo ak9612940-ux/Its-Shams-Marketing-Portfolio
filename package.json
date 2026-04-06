@@ -1,39 +1,37 @@
-{
-  "name": "ai-studio-applet",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint .",
-    "clean": "next clean"
-  },
-  "dependencies": {
-    "@google/genai": "^1.17.0",
-    "@hookform/resolvers": "^5.2.1",
-    "autoprefixer": "^10.4.21",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.553.0",
-    "motion": "^12.23.24",
-    "next": "^15.4.9",
-    "postcss": "^8.5.6",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
-    "tailwind-merge": "^3.3.1"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "4.1.11",
-    "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "9.39.1",
-    "eslint-config-next": "16.0.8",
-    "firebase-tools": "^15.0.0",
-    "tailwindcss": "4.1.11",
-    "tw-animate-css": "^1.4.0",
-    "typescript": "5.9.3"
-  }
+"use client";
+import { motion } from "motion/react";
+import { Menu, X, Rocket } from "lucide-react";
+import { useState } from "react";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="flex items-center gap-2 font-bold text-xl tracking-tight"
+        >
+          <Rocket className="text-blue-600" />
+          <span>Shams<span className="text-blue-600">Marketing</span></span>
+        </motion.div>
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+          <a href="#services" className="hover:text-blue-600 transition-colors">Services</a>
+          <a href="#projects" className="hover:text-blue-600 transition-colors">Case Studies</a>
+          <a href="#contact" className="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-all">
+            Let's Talk
+          </a>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X /> : <Menu />}
+        </button>
+      </div>
+    </nav>
+  );
 }
