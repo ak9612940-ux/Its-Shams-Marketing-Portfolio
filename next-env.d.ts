@@ -1,6 +1,5 @@
-/// <reference types="next" />
-/// <reference types="next/image-types/global" />
-/// <reference path="./.next/types/routes.d.ts" />
-
-// NOTE: This file should not be edited
-// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+File/Folder,Action
+public/,Put your images and logos here.
+components/,"Break your UI (Navbar, Hero, Footer) into reusable pieces."
+styles/,Use Tailwind CSS or CSS Modules to keep your portfolio looking sharp.
+package.json,Keep an eye on your dependencies; keep them updated for security.
