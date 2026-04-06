@@ -1,25 +1,42 @@
-{
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "rules": {
-    "no-unused-vars": "warn",
-    "no-console": "off",
-    "semi": ["error", "always"],
-    "quotes": ["warn", "double"],
-    "indent": ["error", 2],
-    "no-undef": "error",
-    "prefer-const": "warn"
-  },
-  "globals": {
-    "AOS": "readonly",
-    "google": "readonly"
-  }
-}
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+out/
+bin/
+*.class
+
+# Environment variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+secrets.json
+
+# IDEs and Text Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.tmp/
+.cache/
+
+# Java specific (if using Maven/Gradle)
+target/
+.gradle/
