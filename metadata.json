@@ -1,5 +1,32 @@
 {
-  "name": "Shams Ul Rehman Portfolio",
-  "description": "Professional portfolio of Shams Ul Rehman, Digital Marketing Manager specializing in SEO and Content Writing.",
-  "requestFramePermissions": []
+  "profile": {
+    "name": "Shams",
+    "title": "Marketing Professional & Developer",
+    "location": "City, Country",
+    "email": "your-email@example.com",
+    "bio": "Specializing in digital marketing strategies and web-based portfolio solutions.",
+    "socials": {
+      "github": "https://github.com/ak9612940-ux",
+      "linkedin": "https://linkedin.com/in/yourprofile"
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Campaign Alpha",
+      "description": "A successful social media marketing campaign that increased engagement by 40%.",
+      "tech_stack": ["HTML", "CSS", "Analytics"],
+      "image_url": "./images/project1.jpg",
+      "link": "https://project-link.com"
+    },
+    {
+      "id": 2,
+      "title": "E-commerce Growth",
+      "description": "Optimized UI/UX for a retail brand resulting in higher conversion rates.",
+      "tech_stack": ["Java", "JavaScript", "SQL"],
+      "image_url": "./images/project2.jpg",
+      "link": "#"
+    }
+  ],
+  "skills": ["Digital Marketing", "SEO", "Java", "Front-end Development"]
 }
