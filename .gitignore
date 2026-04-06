@@ -1,7 +1,25 @@
-node_modules/
-.next/
-coverage/
-.DS_Store
-*.log
-.env*
-!.env.example
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "semi": ["error", "always"],
+    "quotes": ["warn", "double"],
+    "indent": ["error", 2],
+    "no-undef": "error",
+    "prefer-const": "warn"
+  },
+  "globals": {
+    "AOS": "readonly",
+    "google": "readonly"
+  }
+}
