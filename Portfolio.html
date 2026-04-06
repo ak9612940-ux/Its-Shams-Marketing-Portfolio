@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Shams Ul Rehman - Expert Digital Marketing Manager specializing in SEO, Content Writing, and Strategy.">
+    <meta name="keywords" content="Shams Ul Rehman, Digital Marketing, SEO Expert, Content Writer, Portfolio">
+    <title>Shams Ul Rehman | Digital Marketing Expert</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #007bff;
+            --secondary-blue: #0056b3;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-white: #ffffff;
+            --bg-off-white: #f8f9fa;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 10%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .cta-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 10% 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background: var(--primary-blue);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-card i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            background: var(--bg-off-white);
+            border-radius: 8px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .contact-item:hover {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #222;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-container { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Add burger menu for production */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SR. Digital</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm Shams Ul Rehman</h1>
+            <p>Digital Marketing Manager | SEO Expert | Strategic Content Creator</p>
+            <div class="btn-group">
+                <a href="#projects" class="cta-btn btn-primary">View My Work</a>
+                <a href="https://wa.me/923174137440" class="cta-btn btn-outline"><i class="fab fa-whatsapp"></i> Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-text">
+                <p>As a seasoned **Digital Marketing Manager**, I help brands navigate the complex digital landscape to achieve measurable growth. With a focus on data-driven SEO and high-impact content writing, I bridge the gap between technical optimization and creative storytelling.</p>
+                <p>My mission is to help businesses increase their organic visibility, drive high-quality traffic, and convert visitors into loyal customers through strategic digital planning.</p>
+            </div>
+            <div class="about-stats">
+                <div class="skill-card">
+                    <h3>3+</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background-color: var(--bg-off-white);">
+        <div class="section-title">
+            <h2>My Expertise</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-search"></i>
+                <h3>SEO</h3>
+                <p>On-page, Off-page, and Technical SEO to boost rankings.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-pen-nib"></i>
+                <h3>Content Writing</h3>
+                <p>Engaging, SEO-optimized blog posts and website copy.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-key"></i>
+                <h3>Keyword Research</h3>
+                <p>Finding high-ROI keywords to dominate your niche.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-share-alt"></i>
+                <h3>Social Media</h3>
+                <p>Building community and brand awareness across platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>HowToAndLifes Blog</h3>
+                    <p>A niche blog platform focusing on lifestyle and guides, optimized for organic search.</p>
+                    <a href="https://howtoandlifes.blogspot.com/" target="_blank" style="color: var(--primary-blue); font-weight: 600;">Visit Live →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>SEO Strategy Portfolio</h3>
+                    <p>Comprehensive keyword research and backlink strategy for e-commerce growth.</p>
+                    <a href="https://drive.google.com/drive/folders/ak9612940@gmail" target="_blank" style="color: var(--primary-blue); font-weight: 600;">View Case Study →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Social Media Campaigns</h3>
+                    <p>Visual content strategy and brand management for various clients.</p>
+                    <a href="https://www.pinterest.com/ak9612940/" target="_blank" style="color: var(--primary-blue); font-weight: 600;">View Boards →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background-color: var(--bg-off-white);">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Let's collaborate on your next big project.</p>
+        </div>
+        <div class="contact-links">
+            <a href="mailto:ak9612940@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i> Email Me
+            </a>
+            <a href="https://wa.me/923174137440" class="contact-item">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.linkedin.com/in/shams-ul-rehman-960474245/" class="contact-item">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/ak9612940-ux" class="contact-item">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.facebook.com/shamsreh8" class="contact-item">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Shams Ul Rehman. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Designed by SR Portfolio Systems</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Navbar transparency change on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = '#ffffff';
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
